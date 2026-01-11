@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+body {
+  background: #f8f9fa;
+  padding: 20px;
+  min-height: 195vh;
+}
+
+.conteneur {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #ff6600;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.tableau {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tableau th {
+  background-color: #ff6600;
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.tableau td {
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.titre {
+  background-color: #fff3e0;
+  font-weight: bold;
+  color: #ff6600;
+  font-size: 16px;
+  text-align: center;
+}
+
+.noumrou {
+  margin-bottom: 5px;
+}
+
+.mo3tayett {
+  font-weight: bold;
+  color: #333;
+}
+
+.urgent {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+
+.social-media {
+  display: flex;
+  gap: 8px;
+}
+.lien {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.lien:hover {
+  opacity: 0.7;
+}
+
+.imgtawasol {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.disponibilité {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ddd;
+}
+.le-jour {
+  font-weight: bold;
+  color: #333;
+}
+
+.lheure {
+  color: #666;
+}
+
+.raiek {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.client {
+  font-weight: bold;
+  color: #333;
+}
+
+.date {
+  color: #888;
+  font-size: 14px;
+}
+
+.avis {
+  margin-top: 5px;
+  color: #555;
+}
+
+.njoum {
+  color: #ff6600;
+  font-weight: bold;
+  margin-top: 5px;
+}

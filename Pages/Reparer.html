@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réparer</title>
+    <style>
+        * { margin: 0;
+            padding: 0;
+            font-family: Arial;
+        }
+
+        body {background: #f8f9fa;
+            padding: 20px;
+            min-height: 200vh;
+        }
+        
+        .granddiv { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            background: white; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 { 
+            color: #ff6600; 
+            text-align: center; 
+            margin-bottom: 30px; 
+            font-size: 28px;
+        }
+        
+        .formulaire {     
+            margin-bottom: 25px; 
+            padding: 20px; 
+            background: #f8f8f8; 
+            border-radius: 8px;
+            border-left: 4px solid #ff6600;
+        }
+        
+        h2 { 
+            color: #ff6600; 
+            margin-bottom: 15px; 
+            font-size: 20px;
+        }
+        
+        .divgroup{ 
+            margin-bottom: 15px; 
+        }
+        
+        label { 
+            display: block; 
+            margin-bottom: 5px; 
+            font-weight: bold; 
+            color: #333;
+        }
+        
+        input, select, textarea { 
+            width: 98%; 
+            padding: 10px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+            font-size: 16px;
+        }
+        
+        input:focus, select:focus, textarea:focus { 
+            border-color: #ff6600; 
+            outline: none; /*bech ytbdl couleur l bordure*/
+
+        }
+        
+        .divradio, .divcheckbox { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 10px; 
+            margin-top: 10px;
+        }
+        
+        .radios, .checkboxs { 
+            display: flex; 
+            align-items: center;
+        }
+        
+        input[type="radio"], input[type="checkbox"] { 
+            width: auto; 
+            margin-right: 8px;
+        }
+        
+        .divrang{ 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+            margin-top: 10px;
+        }
+        
+        input[type="range"] { 
+            flex: 1; /*ye5ou l'espace lmawjoud lkol*/
+        }
+        
+        
+        textarea { 
+            min-height: 100px; 
+            resize: vertical;
+        }
+        
+        .les-boutons { 
+            display: flex; 
+            gap: 15px; 
+            justify-content: center; 
+            margin-top: 30px;
+        }
+        
+        button { 
+            padding: 12px 30px; 
+            border: none; 
+            border-radius: 5px; 
+            font-size: 16px; 
+            font-weight: bold; 
+            cursor: pointer;
+        }
+        
+        .sub{ 
+            background: #ff6600; 
+            color: white;
+        }
+        
+        .reset { 
+            background: #6c757d; 
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="granddiv">
+        <h1>Formulaire de Diagnostic Auto</h1>
+        
+        <form action="" method="post">
+
+            <div class="formulaire">
+                <h2>Informations Personnelles</h2>
+                
+                <div class="divgroup">
+                    <label>Nom *</label>
+                    <input type="text" required>
+                </div>
+                
+                <div class="divgroup">
+                    <label>Prénom *</label>
+                    <input type="text" required>
+                </div>
+                
+                <div class="divgroup">
+                    <label>Téléphone *</label>
+                    <input type="tel" required>
+                </div>
+                
+                <div class="divgroup">
+                    <label>Email *</label>
+                    <input type="email" required>
+                </div>
+            </div>
+
+            <div class="formulaire">
+                <h2>Informations Véhicule</h2>
+                <div class="divgroup">
+                    <label>Modèle du véhicule *</label>
+                    <input type="text" required>
+                </div>
+                
+                <div class="divgroup">
+                    <label>Année*</label>
+                    <select required>
+                        <option value="">Sélectionnez l'année</option>
+                        <option>après 2020</option>
+                        <option>après 2018</option>
+                        <option>après 2015</option>
+                        <option>après 2010</option>
+                        <option>après 2005</option>
+                        <option>Avant avant 2005</option>
+                    </select>
+                </div>
+                
+                <div class="divgroup">
+                    <label>Type de carburant</label>
+                    <div class="divradio">
+                           <div class="radios">
+                            <input type="radio" name="fuel" id="r1"><label for="r1">Essence</label> 
+                        </div>
+                        <div class="radios">
+                            <input type="radio" name="fuel"id="r2"> <label for="">Diesel</label>
+                        </div>
+                        <div class="radios">
+                            <input type="radio" name="fuel"id="r3"><label for="">Électrique</label> 
+                        </div>
+                        <div class="radios">
+                            <input type="radio" name="fuel" id="r4"><label for=""> Hybride</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formulaire">
+                <h2>Description de la Panne</h2>
+                
+                <div class="divgroup">
+                    <label>Décrivez la panne *</label>
+                    <textarea placeholder="Décrivez le problème que vous rencontrez avec votre véhicule..." required></textarea>
+                </div>
+                
+                <div class="divgroup">
+                    <label>Symptômes constatés</label>
+                    <div class="divcheckbox">
+                        <div class="checkbox-option">
+                            <input type="checkbox"> Bruit anormal
+                        </div>
+                        <div class="checkboxs">
+                            <input type="checkbox"> Vibrations
+                        </div>
+                        <div class="checkboxs">
+                            <input type="checkbox"> Voyant allumé
+                        </div>
+                        <div class="checkboxs">
+                            <input type="checkbox"> Fumée
+                        </div>
+                        <div class="checkboxs">
+                            <input type="checkbox"> Perte de puissance
+                        </div>
+                        <div class="checkboxs">
+                            <input type="checkbox"> Problème démarrage
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="divgroup">
+                    <label>Urgence de la réparation</label>
+                    <div class="divrang">
+                        Peu urgent<input type="range" min="1" max="5" value="3">Très urgent
+                    </div>
+                </div>
+            </div>
+            <div class="les-boutons">
+                <button type="reset" class="reset">Annuler</button>
+                <button type="submit" class="sub">Envoyer</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
